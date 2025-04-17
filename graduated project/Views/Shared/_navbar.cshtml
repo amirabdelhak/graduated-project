@@ -1,0 +1,102 @@
+﻿
+<header class="header sticky-top shadow">
+    <!-- Topbar -->
+    <div class="topbar py-1">
+        <div class="container d-flex justify-content-between">
+            <div class="contact-info d-flex align-items-center">
+                <i class="bi bi-envelope me-2"></i>
+                <a href="amirabdelhak28@gmail.com">amirabdelhak28@gmail.com</a>
+                <i class="bi bi-phone ms-4 me-2"></i>
+                <span>+201011451348</span>
+            </div>
+            <div class="social-links d-none d-md-flex">
+                <a href="https://x.com/Amirabdelhak4"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.facebook.com/amir.abdelhak.5?locale=ar_AR"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/amir.abdelhak.5/"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/amir-abdelhak/"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="branding py-2">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a asp-controller="Home" asp-action="Index" class="d-flex align-items-center text-white text-decoration-none logo">
+                <img src="~/assets/img/logo.png" alt="Logo" style="height: 40px;" class="me-2" />
+                <span class="fw-bold fs-4">ShopSphere</span>
+            </a>
+
+            <nav class="navmenu">
+                <ul class="nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-controller="Home" asp-action="Index"><i class="bi bi-house-door"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-controller="Products" asp-action="getproducts"><i class="bi bi-box-seam"></i> Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text-white" href="#" id="categoryDropdown" data-bs-toggle="dropdown">
+        <i class="bi bi-grid"></i> Categories
+    </a>
+    <ul class="dropdown-menu">
+        @if (ViewBag.Categories != null)
+        {
+            foreach (var category in ViewBag.Categories)
+            {
+                <li>
+                    <a class="dropdown-item" asp-controller="Products" asp-action="getproducts" asp-route-categoryId="@category.Id">@category.Name</a>
+                </li>
+            }
+        }
+    </ul>
+</li>
+
+
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        @if (User.IsInRole("super admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-controller="Account" asp-action="adminRegister">
+                                    <i class="bi bi-person-plus-fill"></i> Register Admin
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-controller="Account" asp-action="superadminRegister">
+                                    <i class="bi bi-person-badge-fill"></i> Register Super Admin
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-controller="Role" asp-action="Add
+">
+                                    <i class="bi bi-shield-lock-fill"></i> Add Role
+                                </a>
+                            </li>
+                        }
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white" onclick="document.getElementById('logoutForm').submit(); return false;">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
+                            <form id="logoutForm" method="post" asp-controller="Account" asp-action="Logout" style="display:none;"></form>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Account" asp-action="Login">
+                                <i class="bi bi-box-arrow-in-right"></i> Login
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Account" asp-action="Register">
+                                <i class="bi bi-person-plus"></i> Register
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

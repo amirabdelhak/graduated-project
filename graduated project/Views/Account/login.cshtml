@@ -1,0 +1,33 @@
+﻿@model graduated_project.viewmodels.loginvm
+@{
+    ViewData["Title"] = "User Login";
+    Layout = "_loginlayout";
+}
+
+<h2 class="text-center mb-4">User Login</h2>
+
+<form asp-action="Login" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3 text-center"></div>
+
+    <div class="mb-3">
+        <label asp-for="username" class="form-label">Username</label>
+        <input asp-for="username" class="form-control" />
+        <span asp-validation-for="username" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="password" class="form-label">Password</label>
+        <input asp-for="password" type="password" class="form-control" />
+        <span asp-validation-for="password" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-save">Login</button>
+
+    <div class="text-center mt-3">
+        <span>Don't have an account?</span>
+        <a asp-controller="Account" asp-action="Register" class="btn btn-link text-decoration-none">Register here</a>
+    </div>
+</form>
+
+
+}

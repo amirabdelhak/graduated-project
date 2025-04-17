@@ -1,0 +1,63 @@
+﻿@model graduated_project.viewmodels.Registervm
+@{
+    ViewData["Title"] = "User Registration";
+    Layout = "_loginlayout";
+}
+
+<h2 class="text-center mb-4">User Registration</h2>
+
+<form asp-action="Register" method="post">
+    <div asp-validation-summary="All" class="text-danger mb-3 text-center"></div>
+
+    <div class="mb-3">
+        <label asp-for="username" class="form-label">Username</label>
+        <input asp-for="username" class="form-control" />
+        <span asp-validation-for="username" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="password" class="form-label">Password</label>
+        <input asp-for="password" class="form-control" />
+        <span asp-validation-for="password" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="confirmpassword" class="form-label">Confirm Password</label>
+        <input asp-for="confirmpassword" class="form-control" />
+        <span asp-validation-for="confirmpassword" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="FirstName" class="form-label">First Name</label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="LastName" class="form-label">Last Name</label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Address" class="form-label">Address</label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Mobilnum" class="form-label">Mobile Number</label>
+        <input asp-for="Mobilnum" class="form-control" />
+        <span asp-validation-for="Mobilnum" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-save">Register</button>
+
+    <div class="text-center mt-3">
+        <span>Have you account to login?</span>
+        <a asp-controller="Account" asp-action="Login" class="btn btn-link text-decoration-none">Click here</a>
+    </div>
+</form>
+
+
+}
