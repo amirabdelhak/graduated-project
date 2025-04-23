@@ -1,4 +1,6 @@
 ﻿using graduated_project.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
 namespace graduated_project.Services
@@ -18,9 +20,11 @@ namespace graduated_project.Services
         }
         public List<Order> GetAll()
         {
-            return context.Orders.ToList();
-
+            return context.Orders
+                .Include(o => o.User)
+                .ToList();
         }
+
         public void Add(Order order)
         {
             context.Orders.Add(order);
@@ -30,7 +34,6 @@ namespace graduated_project.Services
         {
             var ord = context.Orders.SingleOrDefault(o => o.Id == id);
             ord.OrderDate = order.OrderDate;
-            ord.ShippingDate = order.ShippingDate;
             ord.ShippingAddress = order.ShippingAddress;
             ord.TotalPrice = order.TotalPrice;
             context.SaveChanges();

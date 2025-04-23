@@ -13,6 +13,8 @@ namespace graduated_project.Models
         public int? ProductId { get; set; }
         public virtual Product? Product { get; set; }
 
+        public int Quantity { get; set; } = 1;
+
 
         public int? Rate { get; set; }
         public string? Comment { get; set; }

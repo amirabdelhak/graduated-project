@@ -1,0 +1,17 @@
+﻿@model IEnumerable<graduated_project.Models.Category>
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text-white" href="#" id="categoryDropdown" data-bs-toggle="dropdown">
+        <i class="bi bi-grid"></i> Categories
+    </a>
+    <ul class="dropdown-menu">
+        @foreach (var category in Model)
+        {
+            <li>
+                <a class="dropdown-item" asp-controller="Products" asp-action="Getproducts" asp-route-categoryId="@category.Id">
+                    @category.Name
+                </a>
+            </li>
+        }
+    </ul>
+</li>

@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewBag.Title - ShopSphere</title>
+    <title>@ViewData["Title"] - ShopSphere</title>
 
     <link rel="icon" href="~/assets/img/logo.png" type="image/png" />
 
-    <!-- Fonts & Bootstrap & Icons -->
+    <!-- Fonts + Bootstrap + Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
@@ -34,55 +34,49 @@
         }
 
             .topbar a,
-            .navmenu a,
-            .logo,
-            .logo span,
-            footer a {
-                color: #ffffff;
-                text-decoration: none;
+            .topbar .social-links a {
+                color: #fff;
+                margin-left: 10px;
                 transition: all 0.3s ease;
-                padding: 5px 10px;
-                border-radius: 8px;
             }
 
                 .topbar a:hover,
+                .topbar .social-links a:hover,
                 .navmenu a:hover,
                 .navmenu a.active,
-                .logo:hover,
-                .logo span:hover,
-                footer a:hover {
+                .logo span:hover {
                     color: #6b21a8 !important;
                     background-color: #f3e8ff;
-                    text-decoration: none;
-                    transform: scale(1.08);
+                    border-radius: 8px;
+                    padding: 5px 10px;
                 }
 
         .navmenu a {
+            color: #fff !important;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .logo:hover span {
+            color: #6b21a8;
+        }
+
+        main.container {
+            padding: 40px 15px;
+            min-height: 75vh;
+        }
+
+        .btn-purple {
+            background-color: #6b21a8;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
             font-weight: 600;
         }
 
-        .dropdown-menu {
-            background-color: rgba(255, 255, 255, 0.95);
-        }
-
-            .dropdown-menu a {
-                color: #222;
-            }
-
-                .dropdown-menu a:hover {
-                    background-color: #6b46c1;
-                    color: #fff;
-                }
-
-        .btn-purple {
-            background-color: #6b46c1;
-            color: white;
-            border-radius: 50px;
-        }
-
             .btn-purple:hover {
-                background-color: #5936a5;
-                box-shadow: 0 0 10px #6b46c1;
+                background-color: #581c87;
             }
 
         footer {
@@ -90,78 +84,39 @@
             color: #fff;
             padding: 20px 0;
         }
+
+            footer a {
+                color: #ffc107;
+                text-decoration: none;
+            }
+
+                footer a:hover {
+                    text-decoration: underline;
+                }
     </style>
 </head>
-<body class="d-flex flex-column min-vh-100">
 
+<body>
     <!-- Header -->
-    <header class="header sticky-top shadow">
-
-        <!-- Topbar -->
-        <div class="topbar d-flex align-items-center py-1">
-            <div class="container d-flex justify-content-center justify-content-md-between">
-                <div class="contact-info d-flex align-items-center">
-                    <i class="bi bi-envelope me-3"><a href="mailto:contact@example.com">contact@example.com</a></i>
-                    <i class="bi bi-phone text-white"><span class="ms-3">+1 5589 55488 55</span></i>
-                </div>
-                <div class="social-links d-none d-md-flex align-items-center">
-                    <a href="#"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Navbar -->
-        <div class="branding d-flex align-items-center">
-            <div class="container d-flex align-items-center justify-content-between py-2">
-                <a href="/" class="nav-link d-flex align-items-center logo">
-                    <img src="~/assets/img/logo.png" alt="Logo" style="height: 40px;" class="me-2" />
-                    <span class="fw-bold fs-4">ShopSphere</span>
-                </a>
-
-                <nav class="navmenu">
-                    <ul class="nav gap-3">
-                        <li class="nav-item"><a class="nav-link" href="/Home/Index"><i class="bi bi-house-door"></i> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/Products/getproducts"><i class="bi bi-box-seam"></i> Products</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-grid"></i> Categories</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Electronics</a></li>
-                                <li><a class="dropdown-item" href="#">Fashion</a></li>
-                                <li><a class="dropdown-item" href="#">Home & Living</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="/Account/Login"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/Account/Register"><i class="bi bi-person-plus"></i> Register</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    @Html.Partial("_Navbar")
 
     <!-- Main Content -->
-    <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5 px-3">
-        <div class="w-100" style="max-width: 1200px;">
-            @RenderBody()
-        </div>
+    <main class="container">
+        @RenderBody()
     </main>
 
     <!-- Footer -->
-    <footer class="text-center mt-auto">
+    <footer class="text-center">
         <div class="container">
             <p class="mb-1">&copy; @DateTime.Now.Year - <strong>ShopSphere</strong>. All rights reserved.</p>
-            <p class="mb-0">
-                Crafted with ❤️ for our Graduation Project |
-                <a href="#">Back to top</a> |
-                <a href="#">Privacy Policy</a>
-            </p>
+            <p class="mb-0">Crafted with ❤️ for our Graduation Project | <a href="#">Back to top</a></p>
         </div>
     </footer>
 
     <!-- Scripts -->
+    @await RenderSectionAsync("Scripts", required: false)
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const currentPath = window.location.pathname.toLowerCase();
@@ -169,9 +124,12 @@
 
             navLinks.forEach(link => {
                 const linkHref = link.getAttribute("href");
+
+                // تجاهل الروابط الفارغة أو اللي بتبدأ بـ #
                 if (!linkHref || linkHref.startsWith("#")) return;
 
                 const linkPath = new URL(link.href).pathname.toLowerCase();
+
                 if (linkPath === currentPath) {
                     link.classList.add("active");
                 }
@@ -183,7 +141,7 @@
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

@@ -1,4 +1,25 @@
-﻿
+﻿<style>
+.dropdown-menu {
+            background-color: #fff !important;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 5px 0;
+        }
+
+            .dropdown-menu .dropdown-item {
+                color: #333 !important;
+                padding: 10px 20px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+            }
+
+                .dropdown-menu .dropdown-item:hover {
+                    background-color: #f3e8ff;
+                    color: #6b21a8 !important;
+                    border-radius: 8px;
+                }
+
+ </style>
 <header class="header sticky-top shadow">
     <!-- Topbar -->
     <div class="topbar py-1">
@@ -34,22 +55,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" asp-controller="Products" asp-action="getproducts"><i class="bi bi-box-seam"></i> Products</a>
                     </li>
-                    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle text-white" href="#" id="categoryDropdown" data-bs-toggle="dropdown">
-        <i class="bi bi-grid"></i> Categories
-    </a>
-    <ul class="dropdown-menu">
-        @if (ViewBag.Categories != null)
-        {
-            foreach (var category in ViewBag.Categories)
-            {
-                <li>
-                    <a class="dropdown-item" asp-controller="Products" asp-action="getproducts" asp-route-categoryId="@category.Id">@category.Name</a>
-                </li>
-            }
-        }
-    </ul>
-</li>
+                    @await Component.InvokeAsync("CategoryDropdown")
+
+
 
 
 

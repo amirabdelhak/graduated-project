@@ -1,59 +1,37 @@
 ﻿@model IEnumerable<graduated_project.Models.Order>
 
 @{
-    ViewData["Title"] = "GetAll";
+    ViewData["Title"] = "All Orders";
+    Layout = "_mainlayout";
 }
 
-<h1>GetAll</h1>
+<h2>Orders</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.OrderDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ShippingDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ShippingAddress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TotalPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User)
-            </th>
-            <th></th>
+            <th>Order Date</th>
+            <th>Shipping Address</th>
+            <th>Total Price (EGP)</th>
+            <th>User</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShippingDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShippingAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TotalPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.OrderDate.ToString("dd/MM/yyyy hh:mm tt")</td>
+                <td>@order.ShippingAddress</td>
+                <td>@order.TotalPrice</td>
+                <td>@order.User?.FirstName @order.User?.LastName</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@order.Id" class="btn btn-sm btn-primary">Details</a>
+                    <a asp-action="Edit" asp-route-id="@order.Id" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@order.Id" class="btn btn-sm btn-danger"
+                       onclick="return confirm('Are you sure you want to delete this order?');">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

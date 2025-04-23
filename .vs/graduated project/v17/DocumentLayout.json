@@ -1,7 +1,84 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\FORMAT\\Desktop\\graduated project\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\controllers\\appuserproductrepositorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\controllers\\appuserproductrepositorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\views\\order\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\views\\order\\getall.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\services\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\services\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\views\\products\\getproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\views\\products\\getproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\models\\appuserproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\models\\appuserproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\models\\productorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\models\\productorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\views\\role\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\views\\role\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\views\\account\\superadminregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\views\\account\\superadminregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\views\\account\\adminregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\views\\account\\adminregister.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\views\\shared\\_loginlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\views\\shared\\_loginlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +86,241 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppUserProductRepositoryController.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\AppUserProductRepositoryController.cs",
+              "RelativeDocumentMoniker": "graduated project\\Controllers\\AppUserProductRepositoryController.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\AppUserProductRepositoryController.cs",
+              "RelativeToolTip": "graduated project\\Controllers\\AppUserProductRepositoryController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T18:00:05.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetAll.cshtml",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Order\\GetAll.cshtml",
+              "RelativeDocumentMoniker": "graduated project\\Views\\Order\\GetAll.cshtml",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Order\\GetAll.cshtml",
+              "RelativeToolTip": "graduated project\\Views\\Order\\GetAll.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-20T08:03:14.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Services\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "graduated project\\Services\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Services\\OrderRepository.cs",
+              "RelativeToolTip": "graduated project\\Services\\OrderRepository.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAYwBYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:59:31.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "graduated project\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "graduated project\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:55:22.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "getproducts.cshtml",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Products\\getproducts.cshtml",
+              "RelativeDocumentMoniker": "graduated project\\Views\\Products\\getproducts.cshtml",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Products\\getproducts.cshtml",
+              "RelativeToolTip": "graduated project\\Views\\Products\\getproducts.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAowEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-20T07:40:13.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductOrder.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\ProductOrder.cs",
+              "RelativeDocumentMoniker": "graduated project\\Models\\ProductOrder.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\ProductOrder.cs",
+              "RelativeToolTip": "graduated project\\Models\\ProductOrder.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:33:30.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "graduated project\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\Product.cs",
+              "RelativeToolTip": "graduated project\\Models\\Product.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAuwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:33:21.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "graduated project\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\Order.cs",
+              "RelativeToolTip": "graduated project\\Models\\Order.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:33:12.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "graduated project\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "graduated project\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:33:08.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "graduated project\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\Category.cs",
+              "RelativeToolTip": "graduated project\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:32:59.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppUserProduct.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\AppUserProduct.cs",
+              "RelativeDocumentMoniker": "graduated project\\Models\\AppUserProduct.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\AppUserProduct.cs",
+              "RelativeToolTip": "graduated project\\Models\\AppUserProduct.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:32:50.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\AppUser.cs",
+              "RelativeDocumentMoniker": "graduated project\\Models\\AppUser.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\AppUser.cs",
+              "RelativeToolTip": "graduated project\\Models\\AppUser.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAuwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:32:39.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Role\\Add.cshtml",
+              "RelativeDocumentMoniker": "graduated project\\Views\\Role\\Add.cshtml",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Role\\Add.cshtml",
+              "RelativeToolTip": "graduated project\\Views\\Role\\Add.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-19T12:21:17.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "superadminRegister.cshtml",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Account\\superadminRegister.cshtml",
+              "RelativeDocumentMoniker": "graduated project\\Views\\Account\\superadminRegister.cshtml",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Account\\superadminRegister.cshtml",
+              "RelativeToolTip": "graduated project\\Views\\Account\\superadminRegister.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-19T12:21:07.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "register.cshtml",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Account\\register.cshtml",
+              "RelativeDocumentMoniker": "graduated project\\Views\\Account\\register.cshtml",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Account\\register.cshtml",
+              "RelativeToolTip": "graduated project\\Views\\Account\\register.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-19T12:20:59.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "login.cshtml",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Account\\login.cshtml",
+              "RelativeDocumentMoniker": "graduated project\\Views\\Account\\login.cshtml",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Account\\login.cshtml",
+              "RelativeToolTip": "graduated project\\Views\\Account\\login.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-19T12:20:54.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "adminRegister.cshtml",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Account\\adminRegister.cshtml",
+              "RelativeDocumentMoniker": "graduated project\\Views\\Account\\adminRegister.cshtml",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Account\\adminRegister.cshtml",
+              "RelativeToolTip": "graduated project\\Views\\Account\\adminRegister.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-19T12:20:46.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "_loginlayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Shared\\_loginlayout.cshtml",
+              "RelativeDocumentMoniker": "graduated project\\Views\\Shared\\_loginlayout.cshtml",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Shared\\_loginlayout.cshtml",
+              "RelativeToolTip": "graduated project\\Views\\Shared\\_loginlayout.cshtml",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAAJMAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-19T10:30:44.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "graduated project\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "graduated project\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwEUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T09:43:21.642Z"
             }
           ]
         }

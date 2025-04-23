@@ -51,14 +51,18 @@ namespace graduated_project.Controllers
                 productRepository.Addproduct(product);
                 
 
-                return RedirectToAction(nameof(getproducts));
+                return RedirectToAction(nameof(Getproducts));
             }
 
             return View(product);
         }
-        public ActionResult getproducts()
+        public ActionResult Getproducts(int? categoryId)
         {
             var products=productRepository.getproducts();
+            if (categoryId.HasValue)
+            {
+                products = products.Where(p => p.CategoryId == categoryId.Value).ToList();
+            }
             return View(products);
         }
 
@@ -69,7 +73,8 @@ namespace graduated_project.Controllers
         }
         public ActionResult Deleteproduct(int id)
         {
-            return RedirectToAction(nameof(getproducts));
+            productRepository.Delete(id);
+            return RedirectToAction(nameof(Getproducts));
         }
         [HttpGet]
         public IActionResult Update(int id)
@@ -86,7 +91,7 @@ namespace graduated_project.Controllers
             if (ModelState.IsValid)
             {
                 productRepository.Update(id, product);
-                return RedirectToAction(nameof(getproducts));
+                return RedirectToAction(nameof(Getproducts));
 
             }
             else

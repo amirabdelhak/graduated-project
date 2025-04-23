@@ -22,11 +22,11 @@ namespace graduated_project.Controllers
             var order = orderRepository.GetByid(id);
             return View(order);
         }
-        [HttpGet]
-        public IActionResult Add()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public IActionResult Add()
+        //{
+        //    return View();
+        //}
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Add(Order order)

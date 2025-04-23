@@ -36,8 +36,18 @@
                             View Details
                         </a>
 
-                        @if (User.Identity.IsAuthenticated &&
-                       (User.IsInRole("admin") || User.IsInRole("super admin")))
+                        <!-- Add to Cart Form -->
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <form asp-controller="Cart" asp-action="AddToCart" method="post" class="mb-2">
+                                <input type="hidden" name="productId" value="@product.Id" />
+                                <button type="submit" class="btn btn-success w-100">
+                                    Add to Cart
+                                </button>
+                            </form>
+                        }
+
+                        @if (User.IsInRole("admin") || User.IsInRole("super admin"))
                         {
                             <div class="d-flex justify-content-between">
                                 <a asp-action="Update" asp-route-id="@product.Id" class="btn btn-sm btn-warning me-2 w-50">
