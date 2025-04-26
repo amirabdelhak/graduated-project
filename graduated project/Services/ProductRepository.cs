@@ -18,9 +18,9 @@ namespace graduated_project.Services
             this.context = context;
         }
 
-        public Product Getbyid(int id)
+        public Product Getbyid(int productid)
         {
-            return context.Products.Include(p => p.Category).FirstOrDefault(p => p.Id == id);
+            return context.Products.Include(p => p.Category).FirstOrDefault(p => p.Id == productid);
         }
         public List<Product> getproducts ()
         { 

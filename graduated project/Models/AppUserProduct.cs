@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace graduated_project.Models
@@ -7,13 +8,16 @@ namespace graduated_project.Models
     public class AppUserProduct
     {
         [ForeignKey("AppUser") ]
-        public string? AppUserId { get; set; }
+        [Required]
+        public string AppUserId { get; set; }
         public virtual AppUser? AppUser { get; set; }
         [ForeignKey("Product")]
+        [Required]
+
         public int? ProductId { get; set; }
         public virtual Product? Product { get; set; }
 
-        public int Quantity { get; set; } = 1;
+    
 
 
         public int? Rate { get; set; }

@@ -1,0 +1,95 @@
+﻿@model IEnumerable<graduated_project.Models.AppUserProduct>
+@{
+    ViewData["Title"] = "User Reviews";
+}
+
+<h2 class="text-center mb-4">User Reviews</h2>
+
+<div class="container">
+    @foreach (var review in Model)
+    {
+        var rate = review.Rate ?? 0;
+        var fullStars = (int)Math.Floor((double)rate);
+        var hasHalfStar = (rate - fullStars) >= 0.5;
+        var emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+        <div class="card shadow-sm mb-4 p-3 review-card">
+            <div class="d-flex align-items-start">
+                <!-- أول حرف من اسم المستخدم -->
+                <div class="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center me-3"
+                     style="width: 50px; height: 50px; font-size: 20px;">
+                    @review.AppUser?.FirstName?.Substring(0, 1).ToUpper()
+                </div>
+
+                <!-- بيانات المستخدم والتقييم -->
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="mb-1">@review.AppUser?.FirstName</h5>
+                        <small class="text-muted">@review.Date?.ToString("dd MMM yyyy")</small>
+                    </div>
+
+                    <!-- تقييم النجوم باستخدام SVG -->
+                    <div class="mb-2 d-flex">
+                        @for (int i = 0; i < fullStars; i++)
+                        {
+                            <svg width="20" height="20" fill="#ffc107" class="me-1" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.396.198-.824-.149-.746-.592l.83-4.73-3.523-3.356c-.33-.314-.158-.888.283-.95l4.898-.696 2.077-4.485c.197-.426.73-.426.927 0l2.077 4.485 4.898.696c.441.062.613.636.283.95l-3.523 3.356.83 4.73c.078.443-.35.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>
+                        }
+
+                        @if (hasHalfStar)
+                        {
+                            <svg width="20" height="20" fill="#ffc107" class="me-1" viewBox="0 0 16 16">
+                                <path d="M8 12.146l-3.688 1.896.704-4.006L2.342 6.86l4.073-.58L8 2.917v9.229z" />
+                                <path fill="#e4e5e9" d="M8 2.917v9.229l3.688 1.896-.704-4.006 2.674-2.675-4.073-.58L8 2.917z" />
+                            </svg>
+                        }
+
+                        @for (int i = 0; i < emptyStars; i++)
+                        {
+                            <svg width="20" height="20" fill="#e4e5e9" class="me-1" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.396.198-.824-.149-.746-.592l.83-4.73-3.523-3.356c-.33-.314-.158-.888.283-.95l4.898-.696
+                                2.077-4.485c.197-.426.73-.426.927 0l2.077 4.485
+                                4.898.696c.441.062.613.636.283.95l-3.523
+                                3.356.83 4.73c.078.443-.35.79-.746.592L8
+                                13.187l-4.389 2.256z" />
+                            </svg>
+                        }
+                    </div>
+
+                    <!-- التعليق -->
+                    <p class="review-comment mb-2">@review.Comment</p>
+
+                    <!-- أدوات التعديل لو الأدمن -->
+                    @if (User.IsInRole("admin") || User.IsInRole("super admin"))
+                    {
+                        <div class="d-flex justify-content-end">
+                            <a asp-action="Update" asp-route-appUserId="@review.AppUserId" asp-route-productId="@review.ProductId"
+                               class="btn btn-sm btn-outline-warning me-2">Edit</a>
+                            <a asp-action="Delete" asp-route-appUserId="@review.AppUserId" asp-route-productId="@review.ProductId"
+                               class="btn btn-sm btn-outline-danger">Delete</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .review-card {
+        transition: 0.3s;
+        border-left: 5px solid #0d6efd;
+    }
+
+        .review-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+    .review-comment {
+        word-break: break-word;
+        white-space: pre-wrap;
+    }
+</style>
+ 

@@ -1,4 +1,5 @@
 ﻿using graduated_project.Models;
+using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
 
@@ -12,9 +13,13 @@ namespace graduated_project.Services
         {
             this.context = context;
         }
-        public List<AppUserProduct> GetAll()
+        public List<AppUserProduct> GetAll(int prodductid)
         {
-            return context.AppUserProducts.ToList();
+        return context.AppUserProducts
+        .Include(a => a.AppUser)   
+        .Include(a => a.Product)   
+        .Where(a => a.ProductId == prodductid)
+        .ToList();
         }
         public AppUserProduct? GetByIds(string appUserId, int productId)
         {
@@ -23,7 +28,7 @@ namespace graduated_project.Services
         public void Add(AppUserProduct appUserProduct)
         {
             context.AppUserProducts.Add(appUserProduct);
-            context.SaveChangesAsync();
+            context.SaveChanges();
         }
         public void Update(string appUserId, int productId, AppUserProduct appUserProduct)
         {

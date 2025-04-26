@@ -66,9 +66,9 @@ namespace graduated_project.Controllers
             return View(products);
         }
 
-        public ActionResult getproduct(int id)
+        public ActionResult getproduct(int productid)
         {
-            var product = productRepository.Getbyid(id);
+            var product = productRepository.Getbyid(productid);
             return View(product);
         }
         public ActionResult Deleteproduct(int id)

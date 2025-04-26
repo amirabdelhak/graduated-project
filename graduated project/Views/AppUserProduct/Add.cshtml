@@ -1,0 +1,27 @@
+﻿@model graduated_project.Models.AppUserProduct
+
+@{
+    ViewData["Title"] = "Add Review";
+}
+
+<h2>Add Review</h2>
+
+<form asp-action="Add" method="post">
+    <input type="hidden" asp-for="AppUserId" />
+    <input type="hidden" asp-for="ProductId" />
+    <input type="hidden" asp-for="Date" />
+
+    <div class="mb-3">
+        <label asp-for="Rate" class="form-label">Rating (1 to 5)</label>
+        <input asp-for="Rate" class="form-control" min="1" max="5" type="number" />
+        <span asp-validation-for="Rate" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Comment" class="form-label">Comment</label>
+        <textarea asp-for="Comment" class="form-control"></textarea>
+        <span asp-validation-for="Comment" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit Review</button>
+</form>

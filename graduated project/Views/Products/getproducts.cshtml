@@ -32,9 +32,10 @@
                     </p>
 
                     <div class="mt-auto">
-                        <a asp-action="getproduct" asp-route-id="@product.Id" class="btn btn-outline-primary w-100 mb-2">
+                        <a asp-action="getproduct" asp-route-productid="@product.Id" class="btn btn-outline-primary w-100 mb-2">
                             View Details
                         </a>
+
 
                         <!-- Add to Cart Form -->
                         @if (User.Identity.IsAuthenticated)

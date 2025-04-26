@@ -1,31 +1,35 @@
 ﻿using graduated_project.Models;
 using graduated_project.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
 
 namespace graduated_project.Controllers
 {
-    public class AppUserProductRepositoryController : Controller
+    public class AppUserProductController : Controller
     {
         private readonly IAppUserProductRepository appUserProductRepository;
-
-        public AppUserProductRepositoryController(IAppUserProductRepository appUserProductRepository)
+        public AppUserProductController(IAppUserProductRepository appUserProductRepository)
         {
             this.appUserProductRepository = appUserProductRepository;
         }
-        public IActionResult GETALL()
+        public IActionResult GETALL(int productid)
         {
-            appUserProductRepository.GetAll();
-            return View();
+            var reviews = appUserProductRepository.GetAll(productid);
+            return View(reviews);
         }
         public IActionResult GetByIds(string appUserId, int productId)
         {
             appUserProductRepository.GetByIds(appUserId, productId);
             return RedirectToAction(nameof(GETALL));
         }
-        public IActionResult Add()
+        public IActionResult Add(string userid ,int productid)
         {
-            return View();
+            var review = new AppUserProduct { AppUserId = userid ,ProductId = productid ,Date=DateTime.Now};
+            
+            return View(review);
         }
+        [Authorize]
         [HttpPost]
         [IgnoreAntiforgeryToken]
         public IActionResult Add(AppUserProduct appUserProduct)
@@ -33,7 +37,7 @@ namespace graduated_project.Controllers
             if (ModelState.IsValid)
             {
                 appUserProductRepository.Add(appUserProduct);
-                return RedirectToAction(nameof(GETALL));
+                return RedirectToAction("getproduct", "Products", new { productid = appUserProduct.ProductId });
             }
             return View(appUserProduct);
         }

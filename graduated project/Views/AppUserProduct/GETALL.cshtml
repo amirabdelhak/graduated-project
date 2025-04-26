@@ -1,0 +1,60 @@
+﻿@model IEnumerable<graduated_project.Models.AppUserProduct>
+
+@{
+    ViewData["Title"] = "GETALL";
+}
+
+<h1>ALL Reviews</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AppUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppUser.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+                @if (User.IsInRole("admin") || User.IsInRole("super admin"))
+                {
+                    <td>
+                        @Html.ActionLink("Edit", "Update", new { appUserId = item.AppUserId, productId = item.ProductId }) |
+                        @Html.ActionLink("Delete", "Delete", new { appUserId = item.AppUserId, productId = item.ProductId })
+
+                    </td>
+                }
+        </tr>
+}
+    </tbody>
+</table>

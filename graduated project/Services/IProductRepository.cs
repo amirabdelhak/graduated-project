@@ -7,7 +7,7 @@ namespace graduated_project.Services
     public interface IProductRepository
     {
 
-        Product Getbyid(int id);
+        Product Getbyid(int productid);
 
         List<Product> getproducts();
         List<Category> getCategorys();
