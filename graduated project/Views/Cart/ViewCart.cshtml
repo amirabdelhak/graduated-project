@@ -8,10 +8,70 @@
 }
 else
 {
-    <ul>
+    <div class="cart-container">
         @foreach (var product in Model)
         {
-            <li>@product.Name - @product.Priceafterdiscount جنيه</li>
+            <div class="cart-item">
+                <div class="cart-image">
+                    <img src="~/image/@product.ImageName" alt="@product.Name" />
+                </div>
+                <div class="cart-details">
+                    <h5>@product.Name</h5>
+                    <p>@product.Priceafterdiscount EGP</p>
+                </div>
+                <div class="cart-actions">
+                    <a href="@Url.Action("getproduct", "Products", new { productid = product.Id })" class="btn btn-primary btn-sm">
+                        View Product
+                    </a>
+                    <form asp-action="RemoveFromCart" asp-controller="Cart" method="post" style="display:inline;">
+                        <input type="hidden" name="productId" value="@product.Id" />
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            Remove
+                        </button>
+                    </form>
+                </div>
+            </div>
         }
-    </ul>
+    </div>
 }
+
+<style>
+    .cart-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .cart-item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .cart-image img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .cart-details {
+        flex-grow: 1;
+        margin-left: 20px;
+    }
+
+    .cart-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+        .cart-actions a,
+        .cart-actions button {
+            width: 120px;
+        }
+</style>

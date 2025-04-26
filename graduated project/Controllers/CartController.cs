@@ -79,6 +79,44 @@ namespace graduated_project.Controllers
         }
 
 
+        [HttpPost]
+        public IActionResult RemoveFromCart(int productId)
+        {
+            // 1- قراءة الكارت الحالي من الكوكي
+            var cartCookie = Request.Cookies["cart"];
+            List<int> cart;
+
+            if (string.IsNullOrEmpty(cartCookie))
+            {
+                // مفيش كارت - نبدأ واحد جديد
+                cart = new List<int>();
+            }
+            else
+            {
+                // فيه كارت - نفكه من شكل نصي إلى ليست
+                cart = JsonSerializer.Deserialize<List<int>>(cartCookie);
+            }
+
+            // 2- نتأكد إذا كان المنتج موجود في السلة
+            if (cart.Contains(productId))
+            {
+                // 3- نحذف المنتج من السلة
+                cart.Remove(productId);
+
+                // 4- نخزن الكارت المحدث في الكوكي
+                var options = new CookieOptions
+                {
+                    Expires = DateTime.Now.AddDays(7) // الكوكي يعيش 7 أيام
+                };
+                Response.Cookies.Append("cart", JsonSerializer.Serialize(cart), options);
+            }
+
+            // 5- نرجع لعرض السلة أو صفحة المنتجات أو أي صفحة أخرى
+            return RedirectToAction("ViewCart");
+        }
+
+
+
     }
 
 

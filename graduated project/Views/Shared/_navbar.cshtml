@@ -1,25 +1,13 @@
-﻿<style>
-.dropdown-menu {
-            background-color: #fff !important;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 5px 0;
-        }
+﻿@{
+    var cartCookie = Context.Request.Cookies["cart"];
+    int cartCount = 0;
 
-            .dropdown-menu .dropdown-item {
-                color: #333 !important;
-                padding: 10px 20px;
-                font-weight: 600;
-                transition: all 0.3s ease;
-            }
-
-                .dropdown-menu .dropdown-item:hover {
-                    background-color: #f3e8ff;
-                    color: #6b21a8 !important;
-                    border-radius: 8px;
-                }
-
- </style>
+    if (!string.IsNullOrEmpty(cartCookie))
+    {
+        var cartItems = cartCookie.Split(",").ToList();
+        cartCount = cartItems.Count;
+    }
+}
 <header class="header sticky-top shadow">
     <!-- Topbar -->
     <div class="topbar py-1">
@@ -55,14 +43,24 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" asp-controller="Products" asp-action="getproducts"><i class="bi bi-box-seam"></i> Products</a>
                     </li>
+
                     @await Component.InvokeAsync("CategoryDropdown")
-
-
-
-
 
                     @if (User.Identity.IsAuthenticated)
                     {
+                        <li class="nav-item position-relative">
+                            <a class="nav-link text-white" asp-controller="Cart" asp-action="ViewCart">
+                                <i class="bi bi-cart3" style="font-size: 1.5rem; position: relative;"></i>
+                                @if (cartCount > 0)
+                                {
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        @cartCount
+                                        <span class="visually-hidden">products in cart</span>
+                                    </span>
+                                }
+                            </a>
+                        </li>
+
                         @if (User.IsInRole("super admin"))
                         {
                             <li class="nav-item">
@@ -76,8 +74,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" asp-controller="Role" asp-action="Add
-">
+                                <a class="nav-link text-white" asp-controller="Role" asp-action="Add">
                                     <i class="bi bi-shield-lock-fill"></i> Add Role
                                 </a>
                             </li>
