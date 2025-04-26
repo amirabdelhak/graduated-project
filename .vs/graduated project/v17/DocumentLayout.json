@@ -3,40 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\views\\products\\getproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\views\\products\\getproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\views\\cart\\viewcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\views\\cart\\viewcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\models\\shopspheredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\models\\shopspheredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\views\\products\\getproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\views\\products\\getproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\views\\products\\getproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\views\\products\\getproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\controllers\\appuserproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\controllers\\appuserproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\services\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\services\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\services\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\services\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\views\\shared\\components\\reviews\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\views\\shared\\components\\reviews\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\viewcomponents\\reviewsviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\viewcomponents\\reviewsviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|c:\\users\\format\\desktop\\graduated project\\graduated project\\graduated project\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C1215C-BC7B-4E55-A9B7-4E0441D5A5A3}|graduated project\\graduated project.csproj|solutionrelative:graduated project\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +58,98 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ViewCart.cshtml",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Cart\\ViewCart.cshtml",
+              "RelativeDocumentMoniker": "graduated project\\Views\\Cart\\ViewCart.cshtml",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Cart\\ViewCart.cshtml*",
+              "RelativeToolTip": "graduated project\\Views\\Cart\\ViewCart.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-26T18:58:29.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Program.cs",
+              "RelativeDocumentMoniker": "graduated project\\Program.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Program.cs",
+              "RelativeToolTip": "graduated project\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T18:43:34.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShopSpheredbcontext.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\ShopSpheredbcontext.cs",
+              "RelativeDocumentMoniker": "graduated project\\Models\\ShopSpheredbcontext.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\ShopSpheredbcontext.cs",
+              "RelativeToolTip": "graduated project\\Models\\ShopSpheredbcontext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T18:42:34.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "graduated project\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\CartController.cs*",
+              "RelativeToolTip": "graduated project\\Controllers\\CartController.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwDoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T17:54:01.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "getproducts.cshtml",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Products\\getproducts.cshtml",
+              "RelativeDocumentMoniker": "graduated project\\Views\\Products\\getproducts.cshtml",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Products\\getproducts.cshtml",
+              "RelativeToolTip": "graduated project\\Views\\Products\\getproducts.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-26T10:15:02.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "getproduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Products\\getproduct.cshtml",
+              "RelativeDocumentMoniker": "graduated project\\Views\\Products\\getproduct.cshtml",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Products\\getproduct.cshtml",
+              "RelativeToolTip": "graduated project\\Views\\Products\\getproduct.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADUAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-26T09:32:56.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "graduated project\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "graduated project\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAA6wEQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T07:29:04.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Shared\\Components\\Reviews\\Default.cshtml",
               "RelativeDocumentMoniker": "graduated project\\Views\\Shared\\Components\\Reviews\\Default.cshtml",
@@ -71,98 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Services\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "graduated project\\Services\\IProductRepository.cs",
-              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Services\\IProductRepository.cs*",
-              "RelativeToolTip": "graduated project\\Services\\IProductRepository.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T10:00:14.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ReviewsViewComponent.cs",
-              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\ViewComponents\\ReviewsViewComponent.cs",
-              "RelativeDocumentMoniker": "graduated project\\ViewComponents\\ReviewsViewComponent.cs",
-              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\ViewComponents\\ReviewsViewComponent.cs",
-              "RelativeToolTip": "graduated project\\ViewComponents\\ReviewsViewComponent.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T09:46:47.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "graduated project\\Models\\Product.cs",
-              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Models\\Product.cs",
-              "RelativeToolTip": "graduated project\\Models\\Product.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAuwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T09:29:33.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Services\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "graduated project\\Services\\ProductRepository.cs",
-              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Services\\ProductRepository.cs",
-              "RelativeToolTip": "graduated project\\Services\\ProductRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T07:48:52.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "getproducts.cshtml",
-              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Products\\getproducts.cshtml",
-              "RelativeDocumentMoniker": "graduated project\\Views\\Products\\getproducts.cshtml",
-              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Products\\getproducts.cshtml*",
-              "RelativeToolTip": "graduated project\\Views\\Products\\getproducts.cshtml*",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-26T10:15:02.509Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "getproduct.cshtml",
-              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Products\\getproduct.cshtml",
-              "RelativeDocumentMoniker": "graduated project\\Views\\Products\\getproduct.cshtml",
-              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Views\\Products\\getproduct.cshtml",
-              "RelativeToolTip": "graduated project\\Views\\Products\\getproduct.cshtml",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAwFIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-26T09:32:56.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "graduated project\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "graduated project\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAiwDsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T07:29:04.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "AppUserProductController.cs",
               "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\AppUserProductController.cs",
               "RelativeDocumentMoniker": "graduated project\\Controllers\\AppUserProductController.cs",
