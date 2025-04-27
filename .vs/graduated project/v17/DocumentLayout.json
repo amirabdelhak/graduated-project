@@ -62,8 +62,7 @@
               "RelativeToolTip": "graduated project\\Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T10:37:31.562Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T10:37:31.562Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "graduated project\\Views\\Cart\\ViewCart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-26T18:58:29.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T18:58:29.321Z"
             },
             {
               "$type": "Document",
@@ -84,9 +82,9 @@
               "Title": "CartController.cs",
               "DocumentMoniker": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "graduated project\\Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\CartController.cs*",
-              "RelativeToolTip": "graduated project\\Controllers\\CartController.cs*",
-              "ViewState": "AgIAALQAAAAAAAAAAAAAALUAAAAXAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\FORMAT\\Desktop\\graduated project\\graduated project\\graduated project\\Controllers\\CartController.cs",
+              "RelativeToolTip": "graduated project\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAswL0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T17:54:01.771Z",
               "EditorCaption": ""
@@ -101,8 +99,7 @@
               "RelativeToolTip": "graduated project\\Views\\Products\\getproducts.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-26T10:15:02.509Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T10:15:02.509Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "graduated project\\Views\\Products\\getproduct.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-26T09:32:56.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T09:32:56.478Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "graduated project\\Controllers\\ProductsController.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAkwDkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T07:29:04.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T07:29:04.196Z"
             },
             {
               "$type": "Document",
@@ -140,8 +135,7 @@
               "RelativeToolTip": "graduated project\\Views\\Shared\\Components\\Reviews\\Default.cshtml",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-26T10:03:36.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T10:03:36.376Z"
             },
             {
               "$type": "Document",
@@ -153,8 +147,7 @@
               "RelativeToolTip": "graduated project\\Controllers\\AppUserProductController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T07:25:55.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T07:25:55.989Z"
             }
           ]
         }

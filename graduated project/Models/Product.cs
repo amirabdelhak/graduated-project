@@ -27,6 +27,7 @@ namespace graduated_project.Models
         public virtual Category? Category { get; set; }
 
         public virtual ICollection<ProductOrder>? ProductOrders { get; set; }
+
         public virtual ICollection<AppUserProduct>? AppUserProducts { get; set; }
 
 
