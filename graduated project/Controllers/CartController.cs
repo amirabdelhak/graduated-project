@@ -191,8 +191,7 @@ namespace graduated_project.Controllers
             Session session = await service.CreateAsync(options);
 
             return Redirect(session.Url);
-            
-        } 
+        }
     }
 }
 
