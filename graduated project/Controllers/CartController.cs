@@ -11,13 +11,19 @@ namespace graduated_project.Controllers
     public class CartController : Controller
     {
         private readonly ShopSpheredbcontext _context;
+        private readonly IConfiguration _configuration; 
 
-        public CartController(ShopSpheredbcontext context)
+        public CartController(ShopSpheredbcontext context, IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;  
         }
 
-        [HttpPost]
+        
+    
+
+
+    [HttpPost]
         public IActionResult AddToCart(int productId)
         {
             // 1- قراءة الكارت الحالي من الكوكي
@@ -129,19 +135,17 @@ namespace graduated_project.Controllers
 
         public async Task<IActionResult> Checkout()
         {
-            StripeConfiguration.ApiKey = "sk_test_51RIEzNPteMQm3MrSLbt9HzbXjE7sEjihHZxdC38Z8iTuSGpaOJZBnlJhAy2zj931zePVsgqddCesOs8y14kGgAXi00gwmPDupl";
+            StripeConfiguration.ApiKey = _configuration["Stripe:SecretKey"];
 
             // 1- نقرأ IDs المنتجات من الكوكي
             var cartCookie = Request.Cookies["cart"];
             if (string.IsNullOrEmpty(cartCookie))
             {
-                // لو مفيش منتجات في السلة، رجعه لصفحة الكارت
                 return RedirectToAction("ViewCart", "Cart");
             }
 
             var cartProductIds = JsonSerializer.Deserialize<List<int>>(cartCookie);
 
-            // 2- نجيب المنتجات من قاعدة البيانات
             var products = _context.Products
                             .Where(p => cartProductIds.Contains(p.Id))
                             .ToList();
@@ -168,13 +172,12 @@ namespace graduated_project.Controllers
                             // ممكن تضيف صورة كمان هنا لو حابب لازم ندخله بيانات عشان يعرف يعرضها 
                         },
                     },
-                    Quantity = 1, // كل منتج قطعة واحدة (ممكن تعدل لو عندك كميات)
+                    Quantity = 1, 
                 };
 
                 lineItems.Add(lineItem);
             }
 
-            // 4- نحضر سيشن الدفع
             var options = new SessionCreateOptions
             {
                 PaymentMethodTypes = new List<string>
@@ -183,8 +186,8 @@ namespace graduated_project.Controllers
                 },
                 LineItems = lineItems,
                 Mode = "payment",
-                SuccessUrl = "https://yourwebsite.com/Success",
-                CancelUrl = "https://yourwebsite.com/Cancel",
+                SuccessUrl = "https://localhost:44321/Products/getproducts",
+                CancelUrl = "https://localhost:44321/Cart/ViewCart",
             };
 
             var service = new SessionService();
