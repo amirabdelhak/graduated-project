@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Stripe.Checkout;
+using Stripe;
 using System.Text.Json;
 namespace graduated_project.Controllers
 {
@@ -51,6 +53,7 @@ namespace graduated_project.Controllers
             // 4- نرجع مثلا لصفحة المنتجات أو أي مكان
             return RedirectToAction("GetProducts", "Products");
         }
+
 
         public IActionResult ViewCart()
         {
@@ -115,10 +118,81 @@ namespace graduated_project.Controllers
             return RedirectToAction("ViewCart");
         }
 
+        [HttpPost]
+        public IActionResult EmptyCart()
+        {
+            Response.Cookies.Delete("cart");
+            return RedirectToAction("ViewCart");
+        }
 
 
+
+        public async Task<IActionResult> Checkout()
+        {
+            StripeConfiguration.ApiKey = "sk_test_51RIEzNPteMQm3MrSLbt9HzbXjE7sEjihHZxdC38Z8iTuSGpaOJZBnlJhAy2zj931zePVsgqddCesOs8y14kGgAXi00gwmPDupl";
+
+            // 1- نقرأ IDs المنتجات من الكوكي
+            var cartCookie = Request.Cookies["cart"];
+            if (string.IsNullOrEmpty(cartCookie))
+            {
+                // لو مفيش منتجات في السلة، رجعه لصفحة الكارت
+                return RedirectToAction("ViewCart", "Cart");
+            }
+
+            var cartProductIds = JsonSerializer.Deserialize<List<int>>(cartCookie);
+
+            // 2- نجيب المنتجات من قاعدة البيانات
+            var products = _context.Products
+                            .Where(p => cartProductIds.Contains(p.Id))
+                            .ToList();
+
+            if (products == null || !products.Any())
+            {
+                return RedirectToAction("ViewCart", "Cart");
+            }
+
+            // 3- نحول المنتجات إلى Line Items لسترايب
+            var lineItems = new List<SessionLineItemOptions>();
+
+            foreach (var product in products)
+            {
+                var lineItem = new SessionLineItemOptions
+                {
+                    PriceData = new SessionLineItemPriceDataOptions
+                    {
+                        UnitAmount = (long)(product.Priceafterdiscount * 100), // السعر لازم يبقى بالقرش (مش بالجنيه)
+                        Currency = "EGP",
+                        ProductData = new SessionLineItemPriceDataProductDataOptions
+                        {
+                            Name = product.Name,
+                            // ممكن تضيف صورة كمان هنا لو حابب لازم ندخله بيانات عشان يعرف يعرضها 
+                        },
+                    },
+                    Quantity = 1, // كل منتج قطعة واحدة (ممكن تعدل لو عندك كميات)
+                };
+
+                lineItems.Add(lineItem);
+            }
+
+            // 4- نحضر سيشن الدفع
+            var options = new SessionCreateOptions
+            {
+                PaymentMethodTypes = new List<string>
+                {
+                "card",
+                },
+                LineItems = lineItems,
+                Mode = "payment",
+                SuccessUrl = "https://yourwebsite.com/Success",
+                CancelUrl = "https://yourwebsite.com/Cancel",
+            };
+
+            var service = new SessionService();
+            Session session = await service.CreateAsync(options);
+
+            return Redirect(session.Url);
+        }
     }
-
 
 }
 

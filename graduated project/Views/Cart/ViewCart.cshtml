@@ -17,7 +17,7 @@ else
                 </div>
                 <div class="cart-details">
                     <h5>@product.Name</h5>
-                    <p>@product.Priceafterdiscount EGP</p>
+                    <p>Price: @product.Priceafterdiscount EGP</p>
                 </div>
                 <div class="cart-actions">
                     <a href="@Url.Action("getproduct", "Products", new { productid = product.Id })" class="btn btn-primary btn-sm">
@@ -32,6 +32,20 @@ else
                 </div>
             </div>
         }
+
+        <div class="cart-summary">
+            <h4>Total: @Model.Sum(p => p.Priceafterdiscount) EGP</h4>
+
+            <div class="summary-buttons">
+                <form asp-action="EmptyCart" asp-controller="Cart" method="post" style="display:inline;">
+                    <button type="submit" class="btn btn-warning">Empty Cart</button>
+                </form>
+
+                <a href="@Url.Action("Checkout", "Cart")" class="btn btn-success">
+                    Buy Now
+                </a>
+            </div>
+        </div>
     </div>
 }
 
@@ -74,4 +88,20 @@ else
         .cart-actions button {
             width: 120px;
         }
+
+    .cart-summary {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #eef2f7;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .summary-buttons {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
 </style>
