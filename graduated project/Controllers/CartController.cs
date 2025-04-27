@@ -193,6 +193,5 @@ namespace graduated_project.Controllers
             return Redirect(session.Url);
         }
     }
-
 }
 
