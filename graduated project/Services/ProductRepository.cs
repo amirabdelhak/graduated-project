@@ -22,6 +22,12 @@ namespace graduated_project.Services
         {
             return context.Products.Include(p => p.Category).FirstOrDefault(p => p.Id == productid);
         }
+
+
+        public List<Product> search(string name)
+        {
+            return context.Products.Include(p => p.Category).Where(p => p.Name.Contains(name)).ToList();
+        }
         public List<Product> getproducts ()
         { 
             return context.Products.Include(p => p.Category).ToList(); 

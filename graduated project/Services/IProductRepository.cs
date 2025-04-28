@@ -8,6 +8,7 @@ namespace graduated_project.Services
     {
 
         Product Getbyid(int productid);
+        List<Product> search(string name);
 
         List<Product> getproducts();
         List<Category> getCategorys();

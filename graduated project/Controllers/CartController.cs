@@ -26,64 +26,51 @@ namespace graduated_project.Controllers
     [HttpPost]
         public IActionResult AddToCart(int productId)
         {
-            // 1- قراءة الكارت الحالي من الكوكي
             var cartCookie = Request.Cookies["cart"];
             List<int> cart;
 
             if (string.IsNullOrEmpty(cartCookie))
             {
-                // مفيش كارت - نبدأ واحد جديد
                 cart = new List<int>();
             }
             else
             {
-                // فيه كارت - نفكه من شكل نصي إلى ليست
                 cart = JsonSerializer.Deserialize<List<int>>(cartCookie);
             }
-
-            // 2- نتأكد المنتج مش موجود أصلا
+            //الجزء ده عشان ميكررش اضافه منتج هو ضايفه بالفعل 
             if (!cart.Contains(productId))
             {
-                // لو مش موجود - نضيفه
                 cart.Add(productId);
 
-                // 3- نخزن الكارت الجديد في الكوكي
                 var options = new CookieOptions
                 {
-                    Expires = DateTime.Now.AddDays(7) // الكوكي يعيش 7 أيام
+                    Expires = DateTime.Now.AddDays(7) 
                 };
-                Response.Cookies.Append("cart", JsonSerializer.Serialize(cart), options);
+                Response.Cookies.Append("cart", JsonSerializer.Serialize(cart), options);// الكارت هنا عباره عن جيسون يعنى شويه استرينج فلما تطلبه فى اى حته على مستوى البرنامج لازم تفكه بالجيسون بردو
             }
-            // لو موجود بالفعل.. ولا كأننا ضفنا حاجة
-
-            // 4- نرجع مثلا لصفحة المنتجات أو أي مكان
+            
             return RedirectToAction("GetProducts", "Products");
         }
 
 
         public IActionResult ViewCart()
         {
-            // 1- نقرأ الكوكي
             var cartCookie = Request.Cookies["cart"];
             List<int> cart;
 
             if (string.IsNullOrEmpty(cartCookie))
             {
-                // لو الكوكي فاضية.. نعمل ليست فاضية
                 cart = new List<int>();
             }
             else
             {
-                // لو فيها بيانات.. نفكها
                 cart = JsonSerializer.Deserialize<List<int>>(cartCookie);
             }
 
-            // 2- نجيب المنتجات الحقيقية من الداتا بيز بناءً على الـ IDs اللي جوه الكارت
             var products = _context.Products
                             .Where(p => cart.Contains(p.Id))
                             .ToList();
 
-            // 3- نبعته للمشهد (View)
             return View(products);
         }
 
@@ -91,36 +78,29 @@ namespace graduated_project.Controllers
         [HttpPost]
         public IActionResult RemoveFromCart(int productId)
         {
-            // 1- قراءة الكارت الحالي من الكوكي
             var cartCookie = Request.Cookies["cart"];
             List<int> cart;
 
             if (string.IsNullOrEmpty(cartCookie))
             {
-                // مفيش كارت - نبدأ واحد جديد
                 cart = new List<int>();
             }
             else
             {
-                // فيه كارت - نفكه من شكل نصي إلى ليست
                 cart = JsonSerializer.Deserialize<List<int>>(cartCookie);
             }
 
-            // 2- نتأكد إذا كان المنتج موجود في السلة
             if (cart.Contains(productId))
             {
-                // 3- نحذف المنتج من السلة
                 cart.Remove(productId);
 
-                // 4- نخزن الكارت المحدث في الكوكي
                 var options = new CookieOptions
                 {
-                    Expires = DateTime.Now.AddDays(7) // الكوكي يعيش 7 أيام
+                    Expires = DateTime.Now.AddDays(7)   
                 };
                 Response.Cookies.Append("cart", JsonSerializer.Serialize(cart), options);
             }
 
-            // 5- نرجع لعرض السلة أو صفحة المنتجات أو أي صفحة أخرى
             return RedirectToAction("ViewCart");
         }
 
@@ -137,7 +117,6 @@ namespace graduated_project.Controllers
         {
             StripeConfiguration.ApiKey = _configuration["Stripe:SecretKey"];
 
-            // 1- نقرأ IDs المنتجات من الكوكي
             var cartCookie = Request.Cookies["cart"];
             if (string.IsNullOrEmpty(cartCookie))
             {
@@ -155,7 +134,6 @@ namespace graduated_project.Controllers
                 return RedirectToAction("ViewCart", "Cart");
             }
 
-            // 3- نحول المنتجات إلى Line Items لسترايب
             var lineItems = new List<SessionLineItemOptions>();
 
             foreach (var product in products)
@@ -164,15 +142,14 @@ namespace graduated_project.Controllers
                 {
                     PriceData = new SessionLineItemPriceDataOptions
                     {
-                        UnitAmount = (long)(product.Priceafterdiscount * 100), // السعر لازم يبقى بالقرش (مش بالجنيه)
+                        UnitAmount = (long)(product.Priceafterdiscount * 100),
                         Currency = "EGP",
                         ProductData = new SessionLineItemPriceDataProductDataOptions
                         {
                             Name = product.Name,
-                            // ممكن تضيف صورة كمان هنا لو حابب لازم ندخله بيانات عشان يعرف يعرضها 
                         },
                     },
-                    Quantity = 1, 
+                    Quantity = 1,
                 };
 
                 lineItems.Add(lineItem);
@@ -181,13 +158,13 @@ namespace graduated_project.Controllers
             var options = new SessionCreateOptions
             {
                 PaymentMethodTypes = new List<string>
-                {
-                "card",
-                },
+        {
+            "card",
+        },
                 LineItems = lineItems,
                 Mode = "payment",
-                SuccessUrl = "https://localhost:44321/Products/getproducts",
-                CancelUrl = "https://localhost:44321/Cart/ViewCart",
+                SuccessUrl = "https://localhost:44321/Order/Add/", 
+                CancelUrl = "https://localhost:44321/Cart/ViewCart/",         
             };
 
             var service = new SessionService();

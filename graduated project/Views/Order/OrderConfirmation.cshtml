@@ -1,0 +1,36 @@
+﻿@model graduated_project.Models.Order
+
+@{
+    ViewData["Title"] = "Order Confirmation";
+    Layout = "_MainLayout";  
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Order Confirmation</h2>
+
+    <!-- عرض تفاصيل الطلب -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h4>Order #@Model.Id</h4>
+            <p><strong>Order Date:</strong> @Model.OrderDate.ToString("yyyy-MM-dd HH:mm:ss")</p>
+            <p><strong>Shipping Address:</strong> @Model.ShippingAddress</p>
+            <p><strong>Total Price:</strong> @Model.TotalPrice.ToString("C")</p>
+        </div>
+    </div>
+
+    <h4 class="mt-4">Ordered Products:</h4>
+    <div class="list-group">
+        @foreach (var productOrder in Model.ProductOrders)
+        {
+            <div class="list-group-item d-flex justify-content-between align-items-center">
+                <span>@productOrder.Product.Name</span>
+                <span>@productOrder.Product.Priceafterdiscount.ToString("C")</span>
+            </div>
+        }
+    </div>
+
+    <div class="mt-4 text-center">
+        <a href="@Url.Action("GetProducts", "Products")" class="btn btn-primary">Continue Shopping</a>
+        <a href="@Url.Action("ViewCart", "Cart")" class="btn btn-secondary">View Cart</a>
+    </div>
+</div>

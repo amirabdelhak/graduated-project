@@ -2,6 +2,7 @@
 using graduated_project.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace graduated_project.Controllers
 {
@@ -99,6 +100,23 @@ namespace graduated_project.Controllers
                 return View(product);
             }
         }
+
+        public IActionResult Search(string query)
+        {
+            List<Product> products;
+
+            if (string.IsNullOrEmpty(query))
+            {
+                products = productRepository.getproducts(); 
+            }
+            else
+            {
+                products = productRepository.search(query);
+            }
+
+            return View("getproducts", products); 
+        }
+
     }
 }
 

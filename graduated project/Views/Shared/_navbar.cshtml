@@ -9,6 +9,7 @@
     }
 }
 <header class="header sticky-top shadow">
+
     <!-- Topbar -->
     <div class="topbar py-1">
         <div class="container d-flex justify-content-between">
@@ -34,6 +35,12 @@
                 <img src="~/assets/img/logo.png" alt="Logo" style="height: 40px;" class="me-2" />
                 <span class="fw-bold fs-4">ShopSphere</span>
             </a>
+            <form asp-controller="Products" asp-action="Search" method="get" class="d-flex align-items-center mx-3" style="max-width: 400px; position: relative;">
+                <input type="text" name="query" class="form-control rounded-pill ps-5" placeholder="Search for your product..." />
+                <button type="submit" class="btn position-absolute top-50 start-0 translate-middle-y ms-2 text-primary border-0 bg-transparent">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
 
             <nav class="navmenu">
                 <ul class="nav gap-3">
@@ -105,3 +112,12 @@
         </div>
     </div>
 </header>
+<style>
+    .navmenu .dropdown-menu {
+        background-color: rgba(15, 18, 20, 0.8);
+    }
+
+    .form-control {
+        margin: 2 10px;
+    }
+</style>
