@@ -60,6 +60,7 @@ namespace graduated_project.Controllers
         }
         public IActionResult Delete(string appUserId, int productId)
         {
+
             appUserProductRepository.Delete(appUserId, productId);
             return RedirectToAction(nameof(GETALL));
         }

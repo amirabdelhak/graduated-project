@@ -8,14 +8,17 @@ namespace graduated_project.Controllers
 {
     public class OrderController : Controller
     {
-        ShopSpheredbcontext context = new ShopSpheredbcontext();
 
         private readonly IOrderRepository orderRepository;
 
-        public OrderController(IOrderRepository orderRepository)
+        private readonly ShopSpheredbcontext context;
+
+        public OrderController(IOrderRepository orderRepository, ShopSpheredbcontext context)
         {
             this.orderRepository = orderRepository;
+            this.context = context;
         }
+
         public IActionResult GetAll()
         {
             var orders = orderRepository.GetAll();

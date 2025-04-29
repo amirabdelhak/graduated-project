@@ -66,6 +66,7 @@ namespace graduated_project.Controllers
             }
             return View(products);
         }
+        [Authorize]
 
         public ActionResult getproduct(int productid)
         {

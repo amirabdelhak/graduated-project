@@ -64,9 +64,9 @@
                     @if (User.IsInRole("admin") || User.IsInRole("super admin"))
                     {
                         <div class="d-flex justify-content-end">
-                            <a asp-action="Update" asp-route-appUserId="@review.AppUserId" asp-route-productId="@review.ProductId"
+                            <a asp-controller="AppUserProduct" asp-action="Update" asp-route-appUserId="@review.AppUserId" asp-route-productId="@review.ProductId"
                                class="btn btn-sm btn-outline-warning me-2">Edit</a>
-                            <a asp-action="Delete" asp-route-appUserId="@review.AppUserId" asp-route-productId="@review.ProductId"
+                            <a asp-controller="AppUserProduct" sp-action="Delete" asp-route-appUserId="@review.AppUserId" asp-route-productId="@review.ProductId"
                                class="btn btn-sm btn-outline-danger">Delete</a>
                         </div>
                     }
