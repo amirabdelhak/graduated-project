@@ -62,7 +62,7 @@ namespace graduated_project.Controllers
         {
 
             appUserProductRepository.Delete(appUserId, productId);
-            return RedirectToAction(nameof(GETALL));
+            return RedirectToAction("getproduct", "Products", new { productid = productId });
         }
 
     }
